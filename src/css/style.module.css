@@ -1,0 +1,207 @@
+/************ Custom Font ************/
+@font-face {
+	font-family: Centra;
+	src: url('../assets/font/CentraNo2-Bold.ttf');
+	font-weight: 700;
+}
+@font-face {
+	font-family: Centra;
+	src: url('../assets/font/CentraNo2-Medium.ttf');
+	font-weight: 500;
+}
+@font-face {
+	font-family: Centra;
+	src: url('../assets/font/CentraNo2-Book.ttf');
+	font-weight: 400;
+}
+
+/************ Default Css ************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 75px;
+  } 
+ 
+  
+ body {
+    font-weight: 200;
+    overflow-x: hidden;
+    position: relative;
+    /* background-color: #121212 !important; */
+    /* color: #fff !important; */
+    font-family: 'Centra', sans-serif !important;
+  }
+
+
+
+/* styles for navbar component */
+.navbarColors{
+    /* background-color: black; */
+    background: rgb(45,149,151);
+    background: linear-gradient(36deg, rgba(45,149,151,1) 0%, rgba(54,98,233,1) 55%, rgba(178,39,175,1) 100%);
+    color: rgb(201, 201, 201);
+    /* position: fixed; */
+}
+
+/* styles for header */
+.header_open_mobile_app{
+    text-decoration: none;
+    color: rgb(107, 107, 107);
+}
+
+.header_open_mobile_app:hover{
+    color: rgb(207, 203, 203);
+}
+
+/* style for home page images and adds imagesSlide component */
+.image_slide_header {
+    font-size: 30px;
+    margin-top: 20px;
+    padding-left: 30px;
+    float: left;
+    font-weight: bold;
+    float: left;
+    width: 70%;
+    text-align: left;
+    height:fit-content;
+}
+
+.image_slide_add {
+    float : right;
+    padding-right: 30px; 
+    padding-left: 70px;
+    margin-top : 30px;
+    width: 30%;
+
+    
+}
+.card_styles{
+    background-color: rgb(221, 221, 221);
+    color: rgb(51, 51, 51);
+    border: none;
+    height: 300px;
+    /* height: 200px; */
+
+}
+
+.image_slider{
+    float: left;
+    padding-left: 30px;
+    margin-top: 10px;
+    border: none;
+    width: 70% !important;
+}
+
+.blog_post{
+    float: left;
+    padding-left: 30px;
+    margin-top: 20px;
+    border: none;
+    width: 70% !important;
+    height: 200px;
+   
+}
+
+.blog_post_header{
+    color: gray;
+    font-size: 30px;
+    font-weight: bold;
+
+}
+
+.blog_post_end{
+    float: left;
+    padding-left: 30px;
+    margin-top: 150px;
+    border: none;
+    width: 70% !important;
+    height: 200px;
+    color: gray;
+}
+
+/* styles for the footer component */
+.footer_card{
+    margin-top: 300px;
+    border-radius: 0;
+    background-color: rgb(19, 19, 19);
+    color: aliceblue;
+    border: none;
+    width:100%;
+    height: 380px;
+    bottom: 0;
+    width: 100%;
+
+}
+.list_items_left{
+    border: none;
+    float: left;
+
+    background-color: none;
+    color: aliceblue;
+    margin-top: 20px;
+    padding-left: 60px;
+    font-size: small;
+   
+}
+
+.list_items_center{
+    border: none;
+    text-align: center;
+    background-color: none;
+    color: aliceblue;
+    margin-top: 20px;
+    font-size: small;
+
+}
+.list_items_right{
+    border: none;
+    float: right;
+    background-color: none;
+    color: aliceblue;
+    margin-top: 20px;
+    padding-right: 60px;
+    font-size: small;
+    
+}
+.list_items_links{
+    text-decoration: none;
+    color: rgb(226, 226, 226);
+}
+.list_items_links:hover{
+    text-decoration: underline;
+    color: gray;
+
+}
+
+/* styles footer - social media icon */
+.social_media {
+    border: none;
+    text-align: center;
+    background-color: none;
+    color: rgb(146, 146, 146);
+    margin-top: 20px;
+    font-size: small;
+}
+.social_icon_nav{
+    /* margin: 0 auto; */
+    margin-top: 10px;
+    align-self: center;
+    padding-left: 40%;
+}
+
+/* button to top - UpButton component  */
+.button_to_top {
+    margin-top: 60px;
+    margin-bottom: 40px;
+    height: fit-content;
+    width: 100%;   
+    float: right;
+    padding-left: 75%;
+  
+}
+
