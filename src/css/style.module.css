@@ -20,11 +20,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
+    scroll-padding-top: 75px;
+
   }
   
   html {
     scroll-behavior: smooth;
-    scroll-padding-top: 75px;
+    /* scroll-padding-top: 75px; */
   } 
  
   
@@ -46,6 +49,18 @@
     background: linear-gradient(36deg, rgba(45,149,151,1) 0%, rgba(54,98,233,1) 55%, rgba(178,39,175,1) 100%);
     color: rgb(201, 201, 201);
     /* position: fixed; */
+}
+.link{
+    text-decoration: none;
+    color: rgb(199, 198, 198);
+    padding:7px;
+
+
+}
+.link:hover{
+    text-decoration: none;
+    color: rgb(224, 224, 224);
+
 }
 
 /* styles for header */
@@ -202,6 +217,7 @@
     width: 100%;   
     float: right;
     padding-left: 75%;
+    display: block;
   
 }
 

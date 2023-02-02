@@ -1,0 +1,26 @@
+.blog_post{
+    float: left;
+    padding-left: 30px;
+    margin-top: 20px;
+    border: none;
+    width: 70% !important;
+    height: 200px;
+   
+}
+
+.blog_post_header{
+    color: gray;
+    font-size: 30px;
+    font-weight: bold;
+
+}
+
+.blog_post_end{
+    float: left;
+    padding-left: 30px;
+    margin-top: 150px;
+    border: none;
+    width: 70% !important;
+    height: 200px;
+    color: gray;
+}

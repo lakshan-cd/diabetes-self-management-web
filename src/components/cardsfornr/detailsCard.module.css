@@ -1,0 +1,14 @@
+.carddiv{
+    /* width: 30%;
+    padding-left: 20px;
+    padding-top: 20px;*/
+    /* border: 1px solid red;  */
+    /* float: left; */
+    padding-left: 30px;
+    /* margin-top: 30px; */
+    /* padding-top: 500px; */
+    border: none;
+    width: 30% !important;
+    height: 200px;
+    color: gray;
+}

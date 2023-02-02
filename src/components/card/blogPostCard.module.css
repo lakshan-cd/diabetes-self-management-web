@@ -1,0 +1,18 @@
+.blog_post{
+    float: right;
+    padding-left: 30px;
+    margin-top: 20px;
+    border: none;
+    width: 70% !important;
+    height: 300px;
+   
+}
+
+.card_styles{
+    background-color: rgb(221, 221, 221);
+    color: rgb(51, 51, 51);
+    border: none;
+    height: 250px;
+    /* height: 200px; */
+
+}
