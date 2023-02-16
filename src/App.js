@@ -13,6 +13,7 @@ import DataFetch from './components/Pages/DataFetch';
 import HealthyLiving from './components/Pages/HealthyLiving';
 import { Routes ,Route} from 'react-router-dom';
 import AboutDiabetes from './components/Pages/AboutDiabetes';
+import ReadMore from './components/Pages/ReadMore';
 
 function App() {
   return (
@@ -34,8 +35,9 @@ function App() {
    <Routes>
     <Route path="/" element={<Main />}/>
     <Route path="/healthyliving" element={<HealthyLiving />}/>
-    <Route path="/newsanresearch" element={<NewsAndResearch/>}/>
+    <Route path="/newsandresearch" element={<NewsAndResearch/>}/>
     <Route path="/aboutdiabetes" element={<AboutDiabetes />}/>
+    <Route path="/ReadMore" element={<ReadMore />}/>
 
    </Routes>
     </div>

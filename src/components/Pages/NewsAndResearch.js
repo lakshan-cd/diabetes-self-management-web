@@ -43,7 +43,7 @@ const NewsAndResearch = () => {
           </Col>
         </Row>
       </div>
-
+git 
       <div>
         <SideAddCard />
       </div>

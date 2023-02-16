@@ -7,6 +7,8 @@ import Header from "../Header";
 import NavbarComp from "../NavbarComp";
 import UpButton from "../UpButton";
 import styles from "./HealthyLiving.module.css";
+import { Routes ,Route} from 'react-router-dom';
+import ReadMore from "./ReadMore";
 
 const HealthyLiving = () => {
   return (
@@ -116,6 +118,11 @@ const HealthyLiving = () => {
       <div>
       <Footer />
       </div>
+      <Routes>
+    <Route path="/ReadMore" element={<ReadMore />}/>
+   
+
+   </Routes>
     </div>
   );
 };

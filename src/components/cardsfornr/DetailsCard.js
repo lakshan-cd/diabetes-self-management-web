@@ -3,6 +3,9 @@ import slideShowImage4 from "../../assets/slide-show-home-page/slide-show-4.jpg"
 import styles from "./detailsCard.module.css";
 import sildeAdd1 from "../../assets/side-add/slide-add-1.png";
 import slideShowImage6 from "../../assets/slide-show-home-page/slide-show-6.jpg.png";
+import ReadMore from "../Pages/ReadMore";
+import { Routes ,Route ,Link} from 'react-router-dom';
+
 
 const DetailsCard = () => {
   return (
@@ -32,7 +35,7 @@ const DetailsCard = () => {
                     Some quick example text to build on the card title and make
                     up the bulk of the card's content.
                   </Card.Text>
-                  <Button variant="primary">Read more</Button>
+                 <Link to ="/ReadMore"> <Button  variant="primary">Read more</Button></Link>
                 </Card.Body>
               </Card>
             </div>
@@ -54,6 +57,11 @@ const DetailsCard = () => {
             </div>
           </Col> */}
         {/* </Row> */}
+
+        {/* <Routes>
+    <Route path="/ReadMore" element={<ReadMore />}/>
+
+   </Routes> */}
       </div>
     // </div>
   );
