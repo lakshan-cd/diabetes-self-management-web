@@ -21,13 +21,7 @@ const AboutDiabetes = () => {
       <SideAddCard />
       <NewsArticle
         title="Level 1 diebetes"
-        description=" Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum."
+        description=" Type 1 diabetes is an autoimmune disorder typically diagnosed in children, teens and young adults, but it can develop at any age. Learn about the signs and symptoms of this condition and get expert guidance on blood sugar monitoring, medication, meal planning and more."
       />
       <SideAddCard />
 

@@ -28,6 +28,7 @@
   html {
     scroll-behavior: smooth;
     /* scroll-padding-top: 75px; */
+
   } 
  
   
@@ -38,6 +39,8 @@
     /* background-color: #121212 !important; */
     /* color: #fff !important; */
     font-family: 'Centra', sans-serif !important;
+
+
   }
 
 
@@ -54,6 +57,14 @@
     text-decoration: none;
     color: rgb(199, 198, 198);
     padding:7px;
+
+
+}
+
+.dropDown_link{
+    text-decoration: none;
+    color: rgb(199, 198, 198);
+    /* padding:7px; */
 
 
 }
@@ -140,8 +151,20 @@
 }
 
 /* styles for the footer component */
+.footer{
+    /* position: absolute;
+    margin-top: 2000px;
+  bottom: 0;
+  width: 100%;
+  height: 50px; */
+  /* padding-top: 100px; */
+
+
+
+}
+
 .footer_card{
-    margin-top: 300px;
+    /* margin-top: 300px;
     border-radius: 0;
     background-color: rgb(19, 19, 19);
     color: aliceblue;
@@ -150,6 +173,17 @@
     height: 380px;
     bottom: 0;
     width: 100%;
+    padding-top: 100px; */
+
+    position: absolute;
+    bottom: 0;
+    border-radius: 0;
+    background-color: rgb(19, 19, 19);
+    color: aliceblue;
+    border: none;
+    width: 100%;
+    height: 380px;
+    
 
 }
 .list_items_left{
@@ -158,6 +192,7 @@
 
     background-color: none;
     color: aliceblue;
+
     margin-top: 20px;
     padding-left: 60px;
     font-size: small;
@@ -218,6 +253,24 @@
     float: right;
     padding-left: 75%;
     display: block;
+    /* bottom: 20px; */
   
 }
+
+/* .scroll-button{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: opacity 0.2s ease-in-out;
+}
+.scroll-button:hover {
+    opacity: 0.8;
+  } */
 

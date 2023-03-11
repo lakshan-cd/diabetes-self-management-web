@@ -8,12 +8,12 @@ import navIcon5 from "../assets/images-header/navIcon-login.png";
 import sildeAdd1 from "../assets/side-add/slide-add-1.png";
 
 const Footer = () => {
-  const alertClicked = () => {
-    alert("You clicked the third ListGroupItem");
-  };
+  // const alertClicked = () => {
+  //   alert("You clicked the third ListGroupItem");
+  // };
 
   return (
-    <div>
+    <div >
       <div className={styles.footer}>
         <Card className={styles.footer_card}>
           <Card.Body>

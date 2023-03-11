@@ -9,16 +9,58 @@ import UpButton from "../UpButton";
 import styles from "./HealthyLiving.module.css";
 import { Routes ,Route} from 'react-router-dom';
 import ReadMore from "./ReadMore";
+import { useEffect, useState } from "react";
+import axios from "axios";
+
 
 const HealthyLiving = () => {
+  const [wdata, setWData] = useState([]);
+
+  useEffect(() => {
+    loadWData();
+  }, []);
+
+  const loadWData = async () => {
+    const result = await axios.get(
+      "http://localhost:8082/getworkoutsdata"
+    );
+    setWData(result.data);
+    console.log(result.data);
+  };
+  const workoutsData = wdata.map((data, index) => ({
+    id: data.w_did,
+    title: data.d_title,
+    description: data.w_description,
+    imgLink: data.w_imglink,
+  }));
+
+  const [ndata, setNData] = useState([]);
+
+  useEffect(() => {
+    loadNData();
+  }, []);
+
+  const loadNData = async () => {
+    const result = await axios.get(
+      "http://localhost:8082/getdietplan"
+    );
+    setNData(result.data);
+    console.log(result.data);
+  };
+  const nutritionData = ndata.map((data, index) => ({
+    id: data.d_did,
+    title: data.d_title,
+    description: data.d_description,
+    imgLink: data.d_imglink,
+  }));
+
+
+
   return (
+
+    
     <div>
-      {/* <div>
-        <Header />
-      </div>
-      <div>
-        <NavbarComp />
-        </div> */}
+  
     
         <div>
           <div className={styles.image_slide_header}>
@@ -34,8 +76,57 @@ const HealthyLiving = () => {
           <div className={styles.sub_header}>
             <span>Nutrition</span>
           </div>
+
+          <div className={styles.divstyles}>
+        {/* <div> */}
+        <Row className="g-4" xs={1} md={2} style={{ paddingTop: "40px" }}>
+          {/* {Array.from({ length: 3 }).map((_, idx) => ( */}
+          {workoutsData.map((wd, index) => (
+            <Col>
+              <DetailsCard
+                key={index}
+                title={wd.title}
+                description={wd.description}
+                imgLink={wd.imgLink}
+                did={wd.id}
+              />
+            </Col>
+            //  {/* ))} */}
+          ))}
+        </Row>
+        
+      </div>
+
+
+      <div className={styles.sub_header2}>
+            <span>Workouts</span>
+          </div>
+          <div className={styles.divstyles}>
+        {/* <div> */}
+        <Row className="g-4" xs={1} md={2} style={{ paddingTop: "40px" }}>
+          {/* {Array.from({ length: 3 }).map((_, idx) => ( */}
+          {nutritionData.map((nd, index) => (
+            <Col>
+              <DetailsCard
+                key={index}
+                title={nd.title}
+                description={nd.description}
+                imgLink={nd.imgLink}
+                did={nd.id}
+              />
+            </Col>
+            //  {/* ))} */}
+          ))}
+        </Row>
+        
+      </div>
+
+
+
+
+
        
-      <div className={styles.divstyles}>
+      {/* <div className={styles.divstyles}>
         <Row style={{ paddingTop: "50px" }}>
           <Col>
             <div>
@@ -106,7 +197,7 @@ const HealthyLiving = () => {
             </div>
           </Col>
         </Row>
-      </div>
+      </div> */}
       {/* <div>
         <SideAddCard />
       </div>
@@ -114,7 +205,7 @@ const HealthyLiving = () => {
         <SideAddCard />
       </div> */}
      
-      <UpButton />
+      {/* <UpButton />
       <div>
       <Footer />
       </div>
@@ -122,7 +213,7 @@ const HealthyLiving = () => {
     <Route path="/ReadMore" element={<ReadMore />}/>
    
 
-   </Routes>
+   </Routes> */}
     </div>
   );
 };

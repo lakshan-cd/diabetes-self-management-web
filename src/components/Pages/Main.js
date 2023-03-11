@@ -13,7 +13,7 @@ import DetailsCard from "../cardsfornr/DetailsCard";
 
 const Main = () => {
   return (
-    <div>
+    <div style={{position:"relative",paddingBottom:"380px"}}>
     
       <div>
         <div className={styles.image_slide_header}>

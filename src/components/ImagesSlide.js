@@ -10,7 +10,7 @@ import slideShowImage4 from '../assets/slide-show-home-page/slide-show-4.jpg';
 
 const ImagesSlide = () => {
     return (
-        <div style={{ height : 'fit-content'}}>     
+        <div style={{ height : 'fit-content' }}>     
             <div >
                     <div className={styles.image_slide_header} >
                         <span>Diabetes Support system</span>

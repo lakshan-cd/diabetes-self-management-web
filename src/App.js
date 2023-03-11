@@ -14,6 +14,8 @@ import HealthyLiving from './components/Pages/HealthyLiving';
 import { Routes ,Route} from 'react-router-dom';
 import AboutDiabetes from './components/Pages/AboutDiabetes';
 import ReadMore from './components/Pages/ReadMore';
+import Workouts from './components/Pages/Workouts';
+import Nutrition from './components/Pages/Nutrition';
 
 function App() {
   return (
@@ -37,7 +39,13 @@ function App() {
     <Route path="/healthyliving" element={<HealthyLiving />}/>
     <Route path="/newsandresearch" element={<NewsAndResearch/>}/>
     <Route path="/aboutdiabetes" element={<AboutDiabetes />}/>
-    <Route path="/ReadMore" element={<ReadMore />}/>
+    <Route path="/ReadMore/:id/:pageName" element={<ReadMore />}/>
+    <Route path="/workouts" element={<Workouts/>}/>
+    <Route path="/nutrition" element={<Nutrition/>}/>
+
+    
+    {/* <Route path="/ReadMore" element={<DataFetch />}/> */}
+
 
    </Routes>
     </div>

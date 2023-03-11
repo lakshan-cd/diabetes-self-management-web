@@ -9,6 +9,17 @@
     /* padding-top: 500px; */
     border: none;
     width: 30% !important;
-    height: 200px;
+    height: 550px;
     color: gray;
+    display: block;
+    position: relative;
+    transition: box-shadow 0.3s ease;
+}
+.carddiv:hover{
+   
+    
+}
+
+.card:hover{
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }

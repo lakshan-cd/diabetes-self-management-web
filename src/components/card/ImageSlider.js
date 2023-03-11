@@ -5,7 +5,7 @@ import slideShowImage2 from '../../assets/slide-show-home-page/slide-show-2.jpg'
 import slideShowImage3 from '../../assets/slide-show-home-page/slide-show-3.jpg';
 import slideShowImage4 from '../../assets/slide-show-home-page/slide-show-4.jpg';
 
-const ImageSlider = () => {
+const ImageSlider = (props) => {
     return (
         <div>
                  <div className={styles.image_slider}>
@@ -13,7 +13,8 @@ const ImageSlider = () => {
                         <Carousel.Item>
                             <img
                             className="d-block w-100"
-                            src={slideShowImage1}
+                            src={props.imgLink}
+                            // src={slideShowImage1}
                             alt="First slide"
                             style = {{height : '500px'}}
                             />
