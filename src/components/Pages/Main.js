@@ -13,7 +13,8 @@ import DetailsCard from "../cardsfornr/DetailsCard";
 
 const Main = () => {
   return (
-    <div style={{position:"relative",paddingBottom:"380px"}}>
+    <div >
+      <div className={styles.div_around_content}>
     
       <div>
         <div className={styles.image_slide_header}>
@@ -55,9 +56,9 @@ const Main = () => {
       />
       <SideAddCard />
       <BlogPostEnd />
+
+      </div>
       <UpButton />
-
-
 
       <Footer />
     </div>

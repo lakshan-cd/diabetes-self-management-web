@@ -11,6 +11,8 @@ import SideAddCardImage from "../images/SideAddCardImage1";
 const AboutDiabetes = () => {
   return (
     <div>
+      <div  className={styles.div_around_content}>
+
       <div>
         <div className={styles.image_slide_header}>
           <span>About Diabetes</span>
@@ -52,6 +54,7 @@ const AboutDiabetes = () => {
         time1="Last updated 3 mins ago"
         time2="Last updated 6 mins ago"
       />
+      </div>
 
       <UpButton />
 

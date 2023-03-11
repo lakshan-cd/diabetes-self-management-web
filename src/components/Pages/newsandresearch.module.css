@@ -1,13 +1,20 @@
-html,body{
+/* html,body{
     height: 100%;
+} */
+.div_around_content{
+    /* border: 1px solid red; */
+    display: inline-block;
+    height: 2500px;
 }
-
+/* 
 .wrapper{
-    min-height: 100%;
-    height: auto !important; /* This line is important for older browsers */
-    position: relative;
-}
+    border: 1px solid rgb(0, 255, 106);
 
+    min-height: 100%;
+    height: auto !important;  This line is important for older browsers 
+    position: relative;
+} 
+*/
 .imageslider{
     padding-top: 20px;
 }

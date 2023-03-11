@@ -38,6 +38,7 @@ const NewsAndResearch = () => {
   // }
   return (
     <div className={styles.wrapper}>
+      <div className={styles.div_around_content} >
       <div>
         <div className={styles.image_slide_header}>
           <span>News & Research</span>
@@ -128,9 +129,11 @@ const NewsAndResearch = () => {
       </div> */}
 
       {/* </div> */}
-      {/* <UpButton /> */}
 
-      {/* <Footer /> */}
+      </div>
+      <UpButton />
+
+      <Footer />
     </div>
   );
 };

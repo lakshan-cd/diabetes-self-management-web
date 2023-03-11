@@ -5,6 +5,8 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { Row, Col } from "react-bootstrap";
 import DetailsCard from "../cardsfornr/DetailsCard";
+import UpButton from "../UpButton";
+import Footer from "../Footer";
 
 
 const Workouts = () =>{
@@ -31,6 +33,7 @@ const Workouts = () =>{
 
     return(
         <div>
+          <div className={styles.div_around_content}>
         <div>
           <div className={styles.image_slide_header} >
             <span>Workouts for healthy living</span>
@@ -58,8 +61,10 @@ const Workouts = () =>{
             //  {/* ))} */}
           ))}
         </Row>
-        
+        </div>
       </div>
+      <UpButton/>
+      <Footer/>
         </div>
     );
 }

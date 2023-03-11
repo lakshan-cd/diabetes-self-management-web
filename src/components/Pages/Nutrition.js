@@ -1,11 +1,14 @@
 import ImageSlider from "../card/ImageSlider";
 import styles from "./Workouts.module.css";
+import pageSpecificStyles from "./Nutrition.module.css";
 import styleForn from "./Nutrition.module.css"
 import SideAddCard from "../card/SideAddCard";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { Row, Col } from "react-bootstrap";
 import DetailsCard from "../cardsfornr/DetailsCard";
+import UpButton from "../UpButton";
+import Footer from "../Footer";
 
 
 const Nutrition = () =>{
@@ -32,6 +35,7 @@ const Nutrition = () =>{
 
     return(
         <div>
+         <div className={pageSpecificStyles.div_around_content} >
                    <div>
           <div className={styles.image_slide_header} >
             <span>Nutritions for healthy living</span>
@@ -62,6 +66,11 @@ const Nutrition = () =>{
         </Row>
         
       </div>
+
+      </div>
+      <UpButton/>
+      <Footer/>
+
         </div>
     );
 }

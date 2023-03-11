@@ -138,6 +138,7 @@ const ReadMore = () => {
   if (pageName === "newresearch") {
     return (
       <div>
+        <div className={styles.div_around_content}>
         <div className={styles.header}>
           <h1>{newsResearchData.title}</h1>
         </div>
@@ -156,12 +157,16 @@ const ReadMore = () => {
             </p>
           </div>
         </div>
+        </div>
         <UpButton />
+        <Footer/>
       </div>
     );
   } else if (pageName === "workouts") {
     return (
       <div>
+        <div className={styles.div_around_content}>
+
         <div className={styles.header}>
           <h1>{workoutsData.title}</h1>
         </div>
@@ -178,12 +183,17 @@ const ReadMore = () => {
             <p>{workoutsData.description}</p>
           </div>
         </div>
+        </div>
+
         <UpButton />
+        <Footer/>
       </div>
     );
   } else if (pageName === "nutrition") {
     return (
       <div>
+        <div className={styles.div_around_content}>
+
         <div className={styles.header}>
           <h1>{nutritionData.title}</h1>
         </div>
@@ -200,7 +210,9 @@ const ReadMore = () => {
             <p>{nutritionData.description}</p>
           </div>
         </div>
+        </div>
         <UpButton />
+        <Footer/>
       </div>
     );
   }
