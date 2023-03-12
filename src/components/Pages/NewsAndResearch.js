@@ -37,7 +37,7 @@ const NewsAndResearch = () => {
   //   ))
   // }
   return (
-    <div className={styles.wrapper}>
+    <div >
       <div className={styles.div_around_content} >
       <div>
         <div className={styles.image_slide_header}>
