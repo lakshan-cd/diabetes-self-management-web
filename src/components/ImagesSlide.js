@@ -10,11 +10,11 @@ import slideShowImage4 from '../assets/slide-show-home-page/slide-show-4.jpg';
 
 const ImagesSlide = () => {
     return (
-        <div style={{ height : 'fit-content'}}>     
+        <div style={{ height : 'fit-content' }}>     
             <div >
                     <div className={styles.image_slide_header} >
                         <span>Diabetes Support system</span>
-                    </div>
+            </div>
                     <div className={styles.image_slide_add}>
                     <Nav.Link>
 
@@ -28,8 +28,7 @@ const ImagesSlide = () => {
                                 left: '30%',
                                 alignContent : 'center',
                                 fontWeight : 'Blob',
-                                // marginTop : '10px',
-                                // paddingTop : '40px',
+                            
                                 }}> For better service</span>
                     </Card.ImgOverlay>
 

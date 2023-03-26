@@ -1,0 +1,25 @@
+.carddiv{
+    /* width: 30%;
+    padding-left: 20px;
+    padding-top: 20px;*/
+    /* border: 1px solid red;  */
+    /* float: left; */
+    padding-left: 30px;
+    /* margin-top: 30px; */
+    /* padding-top: 500px; */
+    border: none;
+    width: 30% !important;
+    height: 550px;
+    color: gray;
+    display: block;
+    position: relative;
+    transition: box-shadow 0.3s ease;
+}
+.carddiv:hover{
+   
+    
+}
+
+.card:hover{
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
