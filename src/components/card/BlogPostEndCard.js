@@ -12,14 +12,14 @@ const BlogPostEnd = () => {
               <Card className="bg-dark" style={{ border: "none" }}>
                 {/* <Card.Img src={sildeAdd1} alt="Card image" style = {{width : '300px'}} /> */}
                 <Card.ImgOverlay>
-                  <Card.Title>Blog post 3</Card.Title>
+                  <Card.Title>Importanse of manage</Card.Title>
                   <Card.Text>
                     consequat. Duis aute irure dolor in reprehenderit in
                     voluptate velit esse cillum dolore eu fugiat nulla pariatur.
                     Excepteur sint occaecat cupidatat non proident, sunt in
                     culpa qui officia deserunt mollit anim id est laborum.
                   </Card.Text>
-                  <Card.Text>Last updated 3 mins ago</Card.Text>
+                  {/* <Card.Text>Last updated 3 mins ago</Card.Text> */}
                 </Card.ImgOverlay>
               </Card>
             </div>
@@ -30,14 +30,14 @@ const BlogPostEnd = () => {
               <Card className="bg-dark" style={{ border: "none" }}>
                 {/* <Card.Img src={sildeAdd1} alt="Card image" style = {{width : '300px', display : 'block'}} /> */}
                 <Card.ImgOverlay>
-                  <Card.Title>Blog post</Card.Title>
+                  <Card.Title>Prevent</Card.Title>
                   <Card.Text>
                     consequat. Duis aute irure dolor in reprehenderit in
                     voluptate velit esse cillum dolore eu fugiat nulla pariatur.
                     Excepteur sint occaecat cupidatat non proident, sunt in
                     culpa qui officia deserunt mollit anim id est laborum.
                   </Card.Text>
-                  <Card.Text>Last updated 3 mins ago</Card.Text>
+                  {/* <Card.Text>Last updated 3 mins ago</Card.Text> */}
                 </Card.ImgOverlay>
               </Card>
             </div>

@@ -13,7 +13,7 @@ const Footer = () => {
   // };
 
   return (
-    <div >
+    <div>
       <div className={styles.footer}>
         <Card className={styles.footer_card}>
           <Card.Body>

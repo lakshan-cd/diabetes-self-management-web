@@ -1,199 +1,200 @@
 /************ Custom Font ************/
 @font-face {
-	font-family: Centra;
-	src: url('../assets/font/CentraNo2-Bold.ttf');
-	font-weight: 700;
+  font-family: Centra;
+  src: url("../assets/font/CentraNo2-Bold.ttf");
+  font-weight: 700;
 }
 @font-face {
-	font-family: Centra;
-	src: url('../assets/font/CentraNo2-Medium.ttf');
-	font-weight: 500;
+  font-family: Centra;
+  src: url("../assets/font/CentraNo2-Medium.ttf");
+  font-weight: 500;
 }
 @font-face {
-	font-family: Centra;
-	src: url('../assets/font/CentraNo2-Book.ttf');
-	font-weight: 400;
+  font-family: Centra;
+  src: url("../assets/font/CentraNo2-Book.ttf");
+  font-weight: 400;
 }
 
 /* css for div which around container */
-.div_around_content{
-    /* height: fit-content; */
-    /* width: fit-content; */
-    /* border: 2px solid red; */
-    /* padding-bottom: 200px; */
-    display: inline-block;
-    /* height: 2500px; */
+.page_container {
+  min-height: 100vh;
+  position: relative;
+}
+.div_around_content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mainContent {
+  width: 70%;
+  margin-bottom: 100px; /* Adjust the margin to provide space for the footer */
+}
+
+.sideContent {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+
+.sideColumn {
+  margin-bottom: 20px;
 }
 
 /************ Default Css ************/
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-    scroll-padding-top: 75px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  scroll-padding-top: 75px;
+}
 
-  }
-  
-  html {
-    scroll-behavior: smooth;
-    /* scroll-padding-top: 75px; */
+html {
+  scroll-behavior: smooth;
+  /* scroll-padding-top: 75px; */
+}
 
-  } 
- 
-  
- body {
-    font-weight: 200;
-    overflow-x: hidden;
-    position: relative;
-    /* background-color: #121212 !important; */
-    /* color: #fff !important; */
-    font-family: 'Centra', sans-serif !important;
-
-
-  }
-
-
+body {
+  font-weight: 200;
+  overflow-x: hidden;
+  position: relative;
+  /* background-color: #121212 !important; */
+  /* color: #fff !important; */
+  font-family: "Centra", sans-serif !important;
+}
 
 /* styles for navbar component */
-.navbarColors{
-    /* background-color: black; */
-    background: rgb(45,149,151);
-    background: linear-gradient(36deg, rgba(45,149,151,1) 0%, rgba(54,98,233,1) 55%, rgba(178,39,175,1) 100%);
-    color: rgb(201, 201, 201);
-    /* position: fixed; */
+.navbarColors {
+  /* background-color: black; */
+  background: rgb(45, 149, 151);
+  background: linear-gradient(
+    36deg,
+    rgba(45, 103, 151) 0%,
+    rgba(45, 149, 151, 1) 55%,
+    rgb(45, 103, 151) 100%
+  );
+  color: rgb(201, 201, 201);
+  /* position: fixed; */
 }
-.link{
-    text-decoration: none;
-    color: rgb(199, 198, 198);
-    padding:7px;
-
-
-}
-
-.dropDown_link{
-    text-decoration: none;
-    color: rgb(199, 198, 198);
-    /* padding:7px; */
-    /* padding: 0.6rem ; */
-    font-size: 14px;
-    /* color: black; */
-    background-color: transparent;
-    border: none;
-   
-
-
-}
-.link:hover{
-    text-decoration: none;
-    color: rgb(224, 224, 224);
-
+.link {
+  text-decoration: none;
+  color: rgb(199, 198, 198);
+  padding: 7px;
 }
 
-
+.dropDown_link {
+  text-decoration: none;
+  color: rgb(199, 198, 198);
+  /* padding:7px; */
+  /* padding: 0.6rem ; */
+  font-size: 14px;
+  /* color: black; */
+  background-color: transparent;
+  border: none;
+}
+.link:hover {
+  text-decoration: none;
+  color: rgb(224, 224, 224);
+}
 
 /* styles for header */
-.header_open_mobile_app{
-    text-decoration: none;
-    color: rgb(107, 107, 107);
+.header_open_mobile_app {
+  text-decoration: none;
+  color: rgb(107, 107, 107);
 }
 
-.header_open_mobile_app:hover{
-    color: rgb(207, 203, 203);
+.header_open_mobile_app:hover {
+  color: rgb(207, 203, 203);
 }
 
 /* style for home page images and adds imagesSlide component */
 .image_slide_header {
-    font-size: 30px;
-    margin-top: 20px;
-    padding-left: 30px;
-    float: left;
-    font-weight: bold;
-    float: left;
-    width: 70%;
-    text-align: left;
-    height:fit-content;
+  font-size: 30px;
+  margin-top: 20px;
+  padding-left: 30px;
+  float: left;
+  font-weight: bold;
+  float: left;
+  width: 70%;
+  text-align: left;
+  height: fit-content;
 }
 
 .image_slide_add {
-    float : right;
-    padding-right: 30px; 
-    padding-left: 70px;
-    margin-top : 30px;
-    width: 30%;
-
-    
+  float: right;
+  padding-right: 30px;
+  padding-left: 70px;
+  margin-top: 30px;
+  width: 30%;
 }
-.card_styles{
-    background-color: rgb(221, 221, 221);
-    color: rgb(51, 51, 51);
-    border: none;
-    height: 300px;
-    /* height: 200px; */
-
+.card_styles {
+  background-color: rgb(221, 221, 221);
+  color: rgb(51, 51, 51);
+  border: none;
+  height: 300px;
+  /* height: 200px; */
 }
-
-.image_slider{
-    float: left;
-    padding-left: 30px;
-    margin-top: 10px;
-    border: none;
-    width: 70% !important;
+/* 
+.image_slider {
+  float: left;
+  padding-left: 30px;
+  margin-top: 10px;
+  border: none;
+  width: 70% !important;
 }
 
-.blog_post{
-    float: left;
-    padding-left: 30px;
-    margin-top: 20px;
-    border: none;
-    width: 70% !important;
-    height: 200px;
-   
+.blog_post {
+  float: left;
+  padding-left: 30px;
+  margin-top: 20px;
+  border: none;
+  width: 70% !important;
+  height: 200px;
 }
 
-.blog_post_header{
-    color: gray;
-    font-size: 30px;
-    font-weight: bold;
-
+.blog_post_header {
+  color: gray;
+  font-size: 30px;
+  font-weight: bold;
 }
 
-.blog_post_end{
-    float: left;
-    padding-left: 30px;
-    margin-top: 150px;
-    border: none;
-    width: 70% !important;
-    height: 200px;
-    color: gray;
-}
+.blog_post_end {
+  float: left;
+  padding-left: 30px;
+  margin-top: 150px;
+  border: none;
+  width: 70% !important;
+  height: 200px;
+  color: gray;
+} */
+
+
+
 
 /* styles for the footer component */
-.footer{
-    /* position: absolute;
-    margin-top: 2000px;
-  bottom: 0;
-  width: 100%;
-  height: 50px; */
-  /* padding-top: 100px; */
-
-
-
+.footer {
+  
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px; /* Adjust the height of the footer */
+  
 }
 
-.footer_card{
-    margin-top: 100px;
-    border-radius: 0;
-    background-color: rgb(19, 19, 19);
-    color: aliceblue;
-    border: none;
-    width:100%;
-    height: 380px;
-    bottom: 0;
-    width: 100%;
-    /* padding-top: 100px; */
+.footer_card {
+  margin-top: 100px;
+  border-radius: 0;
+  background-color: rgb(19, 19, 19);
+  color: aliceblue;
+  border: none;
+  width: 100%;
+  height: 380px;
+  bottom: 0;
+  width: 100%;
+  /* padding-top: 100px; */
 
-    /* position: absolute;
+  /* position: absolute;
     bottom: 0;
     border-radius: 0;
     background-color: rgb(19, 19, 19);
@@ -201,79 +202,72 @@
     border: none;
     width: 100%;
     height: 380px; */
-    
-
 }
-.list_items_left{
-    border: none;
-    float: left;
+.list_items_left {
+  border: none;
+  float: left;
 
-    background-color: none;
-    color: aliceblue;
+  background-color: none;
+  color: aliceblue;
 
-    margin-top: 20px;
-    padding-left: 60px;
-    font-size: small;
-   
+  margin-top: 20px;
+  padding-left: 60px;
+  font-size: small;
 }
 
-.list_items_center{
-    border: none;
-    text-align: center;
-    background-color: none;
-    color: aliceblue;
-    margin-top: 20px;
-    font-size: small;
-
+.list_items_center {
+  border: none;
+  text-align: center;
+  background-color: none;
+  color: aliceblue;
+  margin-top: 20px;
+  font-size: small;
 }
-.list_items_right{
-    border: none;
-    float: right;
-    background-color: none;
-    color: aliceblue;
-    margin-top: 20px;
-    padding-right: 60px;
-    font-size: small;
-    
+.list_items_right {
+  border: none;
+  float: right;
+  background-color: none;
+  color: aliceblue;
+  margin-top: 20px;
+  padding-right: 60px;
+  font-size: small;
 }
-.list_items_links{
-    text-decoration: none;
-    color: rgb(226, 226, 226);
+.list_items_links {
+  text-decoration: none;
+  color: rgb(226, 226, 226);
 }
-.list_items_links:hover{
-    text-decoration: underline;
-    color: gray;
-
+.list_items_links:hover {
+  text-decoration: underline;
+  color: gray;
 }
 
 /* styles footer - social media icon */
 .social_media {
-    border: none;
-    text-align: center;
-    background-color: none;
-    color: rgb(146, 146, 146);
-    margin-top: 20px;
-    font-size: small;
+  border: none;
+  text-align: center;
+  background-color: none;
+  color: rgb(146, 146, 146);
+  margin-top: 20px;
+  font-size: small;
 }
-.social_icon_nav{
-    /* margin: 0 auto; */
-    margin-top: 10px;
-    align-self: center;
-    padding-left: 40%;
+.social_icon_nav {
+  /* margin: 0 auto; */
+  margin-top: 10px;
+  align-self: center;
+  padding-left: 40%;
 }
 
 /* button to top - UpButton component  */
-.button_to_top {
-    margin-top: 60px;
-    margin-bottom: 40px;
-    height: fit-content;
-    width: 100%;   
-    float: right;
-    padding-left: 90%;
-    display: block;
-    /* bottom: 20px; */
-  
-}
+/* .button_to_top { */
+  /* margin-top: 60px;
+  margin-bottom: 40px; */
+  /* height: fit-content; */
+  /* width: 100%; */
+  /* float: right;
+  padding-right: 10%; */
+  /* display: block; */
+  /* bottom: 20px; */
+/* } */
 
 /* .scroll-button{
     position: fixed;
@@ -292,3 +286,79 @@
     opacity: 0.8;
   } */
 
+  /* .scroll_button_show {
+    display: block;
+  }
+  
+  .scroll_button_hide {
+    display: none;
+  }
+  
+  .button_to_top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    
+  }
+
+  .scroll_button {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .scroll_button_text {
+    margin-right: 8px;
+  }
+  
+  .scroll_button_icon {
+    font-size: 16px;
+  }
+   */
+
+
+   /* /////////// */
+   /* YourComponent.module.css */
+
+.button_to_top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+}
+
+.scroll_button {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #4a55f0;
+  padding: 8px 12px;
+  font-size: 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.scroll_button:hover {
+  background-color: #f5f5f5;
+}
+
+.scroll_button_hide {
+  display: none;
+}
+
+.scroll_button_text {
+  margin-right: 8px;
+}
+
+.scroll_button_icon {
+  font-size: 16px;
+}
+
+
+  

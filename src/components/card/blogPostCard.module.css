@@ -1,9 +1,9 @@
 .blog_post{
-    float: right;
-    padding-left: 30px;
+    /* float: right; */
+    padding-left: 50px;
     margin-top: 20px;
     border: none;
-    width: 70% !important;
+    /* width: 70% !important; */
     height: 300px;
    
 }

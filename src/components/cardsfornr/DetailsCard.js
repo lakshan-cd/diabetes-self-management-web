@@ -1,28 +1,32 @@
 import { Card, Button, Row, Col } from "react-bootstrap";
-import slideShowImage4 from "../../assets/slide-show-home-page/slide-show-4.jpg";
+// import slideShowImage4 from "../../assets/slide-show-home-page/slide-show-4.jpg";
 import styles from "./detailsCard.module.css";
-import sildeAdd1 from "../../assets/side-add/slide-add-1.png";
-import slideShowImage6 from "../../assets/slide-show-home-page/slide-show-6.jpg.png";
-import ReadMore from "../Pages/ReadMore";
-import { Routes, Route, Link } from "react-router-dom";
+// import sildeAdd1 from "../../assets/side-add/slide-add-1.png";
+// import slideShowImage6 from "../../assets/slide-show-home-page/slide-show-6.jpg.png";
+// import ReadMore from "../Pages/ReadMore";
+import {  Link } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 const DetailsCard = (props) => {
-  const maxDescriptionLength = 200;
-  const truncatedDescription = props.description.slice(0, maxDescriptionLength); // Extract a substring of the description that is no longer than the maximum length
-  const id = props.did;
+  const maxDescriptionLength = 150;
+  // console.log(title);
   const pageName = props.pageName;
-  console.log(pageName);
+  const id = props.id;
+  // console.log(id);
 
+  console.log(props.createdDate);
+
+
+  // const handleClick = () => {
+  //   setCurrentPage(page);
+  //   window.scrollTo(0, 0);
+  // };
   return (
     <div className={styles.carddiv}>
-      {/* <Row> */}
-      {/* <Col> */}
-      <div>
-        <Card
-          key={props.key}
-          style={{ width: "410px" }}
-          className={styles.card}
-        >
+      {/* {currentPosts && currentPosts.map((post) => ( */}
+      <div key={props.id}>
+        <Card style={{ width: "409px" }} className={styles.card}>
           <Card.Img
             style={{ width: "409px", height: "200px", objectFit: "cover" }}
             variant="top"
@@ -30,40 +34,81 @@ const DetailsCard = (props) => {
           />
           <Card.Body>
             <Card.Title>{props.title}</Card.Title>
-            <Card.Text>{truncatedDescription}</Card.Text>
-            <Link to={`/ReadMore/${id}/${pageName}`}>
-              {" "}
-              <Button variant="primary">Read more</Button>
+            <Card.Text>
+              {props.description.slice(0, maxDescriptionLength)}
+            </Card.Text>
+            <Card.Text>{props.createdDate}</Card.Text>
+            <Link to={`/ReadMore/${props.id}/${pageName}`}>
+              <div className="read-more-icon" >
+                <FontAwesomeIcon icon={faArrowRight}  /> {/* Icon */}
+                {/* <span className="read-more-text">Read more</span>{" "} */}
+
+                
+                {/* Read more text */}
+              </div>
             </Link>
           </Card.Body>
         </Card>
       </div>
-      {/* </Col> */}
-
-      {/* <Col>
-            <div>
-              <Card style={{ width: "25rem" }}>
-                <Card.Img variant="top" src={slideShowImage4} />
-                <Card.Body>
-                  <Card.Title>Card Title</Card.Title>
-                  <Card.Text>
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </Card.Text>
-                  <Button variant="primary">Go somewhere</Button>
-                </Card.Body>
-              </Card>
-            </div>
-          </Col> */}
-      {/* </Row> */}
-
-      {/* <Routes>
-    <Route path="/ReadMore" element={<ReadMore />}/>
-
-   </Routes> */}
+      {/* ))} */}
     </div>
-    // </div>
   );
 };
 
 export default DetailsCard;
+
+// import { Card, Button } from "react-bootstrap";
+// import styles from "./detailsCard.module.css";
+// import { Link } from "react-router-dom";
+
+// const DetailsCard = (props) => {
+//   const maxDescriptionLength = 200;
+
+//   const formatDate = (dateString) => {
+//     const date = new Date(dateString);
+//     return date.toLocaleDateString("en-US", {
+//       year: "numeric",
+//       month: "long",
+//       day: "numeric",
+//     });
+//   };
+
+//   const handleClick = () => {
+//     window.scrollTo(0, 0);
+//   };
+
+//   return (
+//     <div className={styles.carddiv}>
+//       <div key={props.id}>
+//         <Card style={{ width: "410px" }} className={styles.card}>
+//           <Card.Img
+//             style={{ width: "409px", height: "200px", objectFit: "cover" }}
+//             variant="top"
+//             src={props.imgLink}
+//           />
+//           <Card.Body>
+//             <Card.Title>{props.title}</Card.Title>
+//             <div className={styles.descriptionContainer}>
+//               <Card.Text className={styles.description}>
+//                 {props.description.length > maxDescriptionLength
+//                   ? props.description.slice(0, maxDescriptionLength) + "..."
+//                   : props.description}
+//               </Card.Text>
+//             </div>
+//             <Card.Text>{formatDate(props.createdDate)}</Card.Text>
+//             <Link to={`/ReadMore/${props.id}/${props.pageName}`}>
+//               <Button variant="primary" onClick={handleClick}>
+//                 Read more
+//               </Button>
+//             </Link>
+//           </Card.Body>
+//         </Card>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default DetailsCard;
+
+
+

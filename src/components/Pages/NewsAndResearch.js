@@ -5,135 +5,139 @@ import ImageSlider from "../card/ImageSlider";
 import SideAddCard from "../card/SideAddCard";
 import DetailsCard from "../cardsfornr/DetailsCard";
 import Footer from "../Footer";
-import Header from "../Header";
-import NavbarComp from "../NavbarComp";
+// import Header from "../Header";
+// import NavbarComp from "../NavbarComp";
+import Pagination from "../Pagination/Pagination";
 import UpButton from "../UpButton";
 import styles from "./newsandresearch.module.css";
+import SideAddCardImage from "../images/SideAddCardImage1";
+import { Spinner,Alert  } from 'react-bootstrap'; // Assuming you have a loading spinner component
+
 
 const NewsAndResearch = () => {
   const [data, setData] = useState([]);
+
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postsPerPage, setPostperPage] = useState(10);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(false);
+
 
   useEffect(() => {
     loadData();
   }, []);
 
   const loadData = async () => {
+    try{
     const result = await axios.get(
-      "http://localhost:8082/gettingnewsreasearchdata"
+      "http://localhost:8082/getKInformationByCategory/news and reaserach"
     );
-    setData(result.data);
-    console.log(result.data);
+    const sortedData = result.data.sort(
+      (a, b) => new Date(b.createdDate) - new Date(a.createdDate)
+    );
+    setData(sortedData);
+    console.log(sortedData);
+    setIsLoading(false);
+    }catch (error){
+      console.log(error);
+      setError(true);
+      setIsLoading(false);
+    }
   };
+  
   const NewsResearchData = data.map((data, index) => ({
     id: data.did,
     title: data.d_title,
     description: data.nr_description,
     imgLink: data.nr_imglink,
+    createdDate: data.createdDate, // Add the created_date property
+  }));
+  
+
+  console.log(data.description);
+
+  // Get current posts
+  const indexOfLastPost = currentPage * postsPerPage;
+  const indexOfFirstPost = indexOfLastPost - postsPerPage;
+  const currentPosts = data
+  .slice(indexOfFirstPost, indexOfLastPost)
+  .map((post) => ({
+    ...post,
+    createdDate: post.createdDate, // Add the created_date property
   }));
 
-  // const cardInfo =()=>{
-  //   data.map((dataF , index)=>(
-  //     {id:"{dataF.id}" , description:"{dataF.description}"}
-  //   ))
-  // }
+
+  // Change page
+  // const paginate = pageNumber => setCurrentPage(pageNumber);
+
   return (
-    <div >
-      <div className={styles.div_around_content} >
-      <div>
-        <div className={styles.image_slide_header}>
-          <span>News & Research</span>
+
+    <div className={styles.page_container}>
+      <div className={styles.div_around_content}>
+        <div className={styles.mainContent}>
+          <div>
+            <div className={styles.image_slide_header}>
+              <span>News & Research</span>
+            </div>
+          </div>
+          <ImageSlider 
+          img1 = "https://i.postimg.cc/0y56SY2N/closeup-shot-boy-getting-checkup-by-doctor-min.jpg"
+          img2 = "https://i.postimg.cc/kM8tPMp7/medical-banner-with-doctor-wearing-goggles-min.jpg"
+          img3 = "https://i.postimg.cc/kM8tPMp7/medical-banner-with-doctor-wearing-goggles-min.jpg"
+          img4 = "https://i.postimg.cc/xd4bnXQ1/medical-technology-icon-set-health-wellness-min.jpg"
+         />
+        <div style={{paddingTop : '5px' , paddingLeft:'30px'}}>
+          {isLoading ? (
+            <Spinner animation="border" variant="blue" />
+          ) : error ? (
+            <Alert variant="danger">Error occurred! Try again shortly.</Alert>
+          ) : (
+            <Row className="g-4" xs={1} md={2} style={{ paddingTop: "40px" }}>
+            {currentPosts.map((post) => (
+              <Col key={post.kid}>
+                <DetailsCard
+                  title={post.title}
+                  description={post.description}
+                  imgLink={post.img_url}
+                  id={post.kid}
+                  pageName="nutrition"
+                />
+              </Col>
+            ))}
+          </Row>
+          )}
+
+
+          <Pagination 
+          postsPerPage={postsPerPage} 
+          totalPosts = {data.length} 
+          setCurrentPage = {setCurrentPage}
+          currentPage = {currentPage}
+          />
+        </div>
+        </div>
+
+
+        <div className={styles.sideContent}>
+          <div className={styles.sideColumn}>
+            <SideAddCard />
+          </div>
+          <div className={styles.sideColumn}>
+            <SideAddCard
+              title="Download app now"
+              description="For accessing more services"
+              photo={SideAddCardImage}
+            />
+          </div>
+          <div className={styles.sideColumn}>
+            <UpButton />
+          </div>
+        </div>
+
+        <div>
+          <Footer />
         </div>
       </div>
-
-      <ImageSlider
-        imgLink="https://res.cloudinary.com/dsvziakmb/image/upload/v1678465907/diabetes-self-management/slide-show-1_e4yahe.jpg"
-        imgLink2="https://res.cloudinary.com/dsvziakmb/image/upload/v1678465904/diabetes-self-management/slide-show-5_-_Copy_hwzosw.jpg"
-        imgLink3="https://res.cloudinary.com/dsvziakmb/image/upload/v1678465903/diabetes-self-management/slide-show-3_kjo8gy.jpg"
-      />
-
-      <SideAddCard />
-      <SideAddCard />
-
-      <div className={styles.divstyles}>
-        {/* <div> */}
-        <Row className="g-4" xs={1} md={2} style={{ paddingTop: "40px" }}>
-          {/* {Array.from({ length: 3 }).map((_, idx) => ( */}
-          {NewsResearchData.map((nr, index) => (
-            <Col>
-              <DetailsCard
-                key={index}
-                title={nr.title}
-                description={nr.description}
-                imgLink={nr.imgLink}
-                did={nr.id}
-                pageName = "newresearch"
-              />
-            </Col>
-            //  {/* ))} */}
-          ))}
-        </Row>
-        
-      </div>
-      <div>
-        <SideAddCard />
-      </div>
-
-      {/* <Col>
-            <div>
-              <DetailsCard />
-            </div>
-          </Col>
-        </Row>
-      </div>
-
-      <div>
-        <SideAddCard />
-      </div>
-
-      <div className={styles.divstyles}>
-        <Row style={{ paddingTop: "230px" }}>
-          <Col>
-            <div>
-              <DetailsCard />
-            </div>
-          </Col>
-          <Col>
-            <div>
-              <DetailsCard />
-            </div>
-          </Col>
-        </Row>
-      </div>
-      <div>
-        <SideAddCard />
-      </div>
-      <div className={styles.divstyles} style={{ height: "900px" }}>
-        <Row style={{ paddingTop: "400px" }}>
-          <Col>
-            <div>
-              <DetailsCard />
-            </div>
-          </Col>
-          <Col>
-            <div>
-              <DetailsCard />
-            </div>
-          </Col>
-        </Row>
-      </div>
-      <div>
-        <SideAddCard />
-      </div>
-      <div>
-        <SideAddCard />
-      </div> */}
-
-      {/* </div> */}
-
-      </div>
-      <UpButton />
-
-      <Footer />
     </div>
   );
 };

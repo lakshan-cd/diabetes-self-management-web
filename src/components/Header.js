@@ -64,9 +64,9 @@ const Header = () => {
                 <Nav.Link href="#skills">
                   <img src={navIcon2} alt="" width={20} />
                 </Nav.Link>
-                <Nav.Link href="#skills">
+                {/* <Nav.Link href="#skills">
                   <img src={navIcon5} alt="" width={20} />
-                </Nav.Link>
+                </Nav.Link> */}
               </Nav>
             </div>
           </Col>
