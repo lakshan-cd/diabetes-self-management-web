@@ -1,6 +1,6 @@
 import { Card, Nav } from "react-bootstrap";
 import styles from "./SideAdd.module.css";
-import sildeAdd1 from "../../assets/side-add/slide-add-1.png";
+import sildeAdd1 from "../../assets/side-add/slide-add-2.png";
 
 const SideAddCard = (props) => {
   return (
@@ -14,7 +14,7 @@ const SideAddCard = (props) => {
                 src={sildeAdd1}
                 alt="Card image"
                 style={{
-                  width: "100px",
+                  width: "120px",
                   paddingTop: "80px",
                   alignItems: "center",
                 }}

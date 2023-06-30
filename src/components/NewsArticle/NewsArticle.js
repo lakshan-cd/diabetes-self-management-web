@@ -92,6 +92,8 @@ const NewsArticle = (props) => {
   return (
     <div id="newsArticle" className={styles.blog_post}>
       <h2 className={styles.blog_post_header}>{props.title}</h2>
+      <h4>{props.subtitle}</h4>
+
       <p>{typedText}</p>
     </div>
   );

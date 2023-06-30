@@ -1,9 +1,5 @@
 import { Card, Button, Row, Col } from "react-bootstrap";
-// import slideShowImage4 from "../../assets/slide-show-home-page/slide-show-4.jpg";
 import styles from "./detailsCard.module.css";
-// import sildeAdd1 from "../../assets/side-add/slide-add-1.png";
-// import slideShowImage6 from "../../assets/slide-show-home-page/slide-show-6.jpg.png";
-// import ReadMore from "../Pages/ReadMore";
 import {  Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
@@ -15,8 +11,19 @@ const DetailsCard = (props) => {
   const id = props.id;
   // console.log(id);
 
-  console.log(props.createdDate);
-
+  // console.log(props.createdDate);
+     // Extract date and time from the createdDate
+  let date = '';
+  let time = '';
+  if (props.createdDate) {
+    const createdDate = new Date(props.createdDate);
+    date = createdDate.toLocaleDateString();
+    time = createdDate.toLocaleTimeString();
+  } else {
+    // Display default values when createdDate is null
+    date = 'N/A';
+    time = 'N/A';
+  }
 
   // const handleClick = () => {
   //   setCurrentPage(page);
@@ -26,18 +33,24 @@ const DetailsCard = (props) => {
     <div className={styles.carddiv}>
       {/* {currentPosts && currentPosts.map((post) => ( */}
       <div key={props.id}>
+      {/* <Card className={styles.card}> */}
         <Card style={{ width: "409px" }} className={styles.card}>
-          <Card.Img
+          {/* <Card.Img
             style={{ width: "409px", height: "200px", objectFit: "cover" }}
             variant="top"
             src={props.imgLink}
-          />
+          /> */}
+            <Card.Img
+              className={styles.cardImg}
+              variant="top"
+              src={props.imgLink}
+            />
           <Card.Body>
             <Card.Title>{props.title}</Card.Title>
             <Card.Text>
               {props.description.slice(0, maxDescriptionLength)}
             </Card.Text>
-            <Card.Text>{props.createdDate}</Card.Text>
+            <Card.Text>Posted at : {date} {time}</Card.Text>
             <Link to={`/ReadMore/${props.id}/${pageName}`}>
               <div className="read-more-icon" >
                 <FontAwesomeIcon icon={faArrowRight}  /> {/* Icon */}

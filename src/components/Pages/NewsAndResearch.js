@@ -92,15 +92,16 @@ const NewsAndResearch = () => {
           ) : error ? (
             <Alert variant="danger">Error occurred! Try again shortly.</Alert>
           ) : (
-            <Row className="g-4" xs={1} md={2} style={{ paddingTop: "40px" }}>
+            <Row className="g-4" xs={1} md={2} style={{ paddingTop: "20px" }}>
             {currentPosts.map((post) => (
-              <Col key={post.kid}>
+              <Col key={post.kid} style={{marginTop : "50px"}}>
                 <DetailsCard
                   title={post.title}
                   description={post.description}
                   imgLink={post.img_url}
                   id={post.kid}
                   pageName="nutrition"
+                  createdDate = {post.createdDate}
                 />
               </Col>
             ))}
@@ -120,7 +121,10 @@ const NewsAndResearch = () => {
 
         <div className={styles.sideContent}>
           <div className={styles.sideColumn}>
-            <SideAddCard />
+            <SideAddCard
+            title="Explore the new"
+            description="For accessing more services"
+            />
           </div>
           <div className={styles.sideColumn}>
             <SideAddCard

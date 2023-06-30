@@ -15,6 +15,7 @@ const ReadMore = () => {
 
   useEffect(() => {
     loadWData();
+    window.scrollTo(0, 0); // Scroll to the top of the page
   }, []);
 
   //load the data from database
@@ -36,28 +37,6 @@ const ReadMore = () => {
     : null;
 
   return (
-    // <div>
-    //   <div className={styles.div_around_content}>
-    //     <div className={styles.header}>
-    //       <h1>{dataById.title}</h1>
-    //     </div>
-
-    //     <div className={styles.headerImage}>
-    //       <ImageSlider imgLink={dataById.imgLink} />
-    //     </div>
-    //     <div>
-    //       <SideAddCard />
-    //       <SideAddCard />
-    //     </div>
-    //     <div className={styles.desDivArround}>
-    //       <div className={styles.desDiv}>
-    //         <p style={{ whiteSpace: "pre-wrap" }}>{dataById.description}</p>
-    //       </div>
-    //     </div>
-    //   </div>
-    //   <UpButton />
-    //   <Footer />
-    // </div>
 
 <div className={styles.page_container}>
 <div className={styles.div_around_content}>
@@ -79,7 +58,10 @@ const ReadMore = () => {
 
   <div className={styles.sideContent}>
     <div className={styles.sideColumn}>
-      <SideAddCard />
+      <SideAddCard
+      title="Explore the new"
+      description="For accessing more services"
+      />
     </div>
     <div className={styles.sideColumn}>
       <SideAddCard

@@ -58,11 +58,15 @@ const Workouts = () => {
     imgLink: data.w_imglink,
   }));
 
-  // Get current posts
-  const indexOfLastPost = currentPage * postsPerPage;
-  const indexOfFirstPost = indexOfLastPost - postsPerPage;
-  const currentPosts = wdata.slice(indexOfFirstPost, indexOfLastPost);
-
+   // Get current posts
+   const indexOfLastPost = currentPage * postsPerPage;
+   const indexOfFirstPost = indexOfLastPost - postsPerPage;
+   const currentPosts = wdata
+   .slice(indexOfFirstPost, indexOfLastPost)
+   .map((post) => ({
+     ...post,
+     createdDate: post.createdDate, // Add the created_date property
+   }));
   return (
     // <div>
     //   <div className={styles.div_around_content}>
@@ -132,13 +136,15 @@ const Workouts = () => {
          <Row className="g-4" xs={1} md={2} style={{ paddingTop: "40px" }}>
             {/* {Array.from({ length: 3 }).map((_, idx) => ( */}
             {currentPosts.map((post) => (
-              <Col key={post.kid}>
+              <Col key={post.kid} style={{marginTop : "50px"}}>
                 <DetailsCard
                   title={post.title}
                   description={post.description}
                   imgLink={post.img_url}
                   id={post.kid}
                   pageName="workouts"
+                  createdDate = {post.createdDate}
+
                 />
               </Col>
               
@@ -157,7 +163,10 @@ const Workouts = () => {
 
   <div className={styles.sideContent}>
     <div className={styles.sideColumn}>
-      <SideAddCard />
+      <SideAddCard 
+     title="Explore the new"
+     description="For accessing more services" 
+      />
     </div>
     <div className={styles.sideColumn}>
       <SideAddCard

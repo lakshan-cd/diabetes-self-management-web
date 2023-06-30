@@ -56,7 +56,7 @@ export default class NavbarComp extends Component {
                   className={styles.link}
                   style={{ paddingLeft: "40px" }}
                 >
-                  News and Reserach
+                  News and Research
                 </Link>
                 <Link
                   to="/aboutdiabetes"

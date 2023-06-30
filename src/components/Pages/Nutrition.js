@@ -49,10 +49,15 @@ const Nutrition = () => {
     imgLink: data.d_imglink,
   }));
 
+  // Get current posts
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
-  const currentPosts = ndata.slice(indexOfFirstPost, indexOfLastPost);
-
+  const currentPosts = ndata
+  .slice(indexOfFirstPost, indexOfLastPost)
+  .map((post) => ({
+    ...post,
+    createdDate: post.createdDate, // Add the created_date property
+  }));
   return (
     <div className={styles.page_container}>
       <div className={styles.div_around_content}>
@@ -76,13 +81,15 @@ const Nutrition = () => {
           ) : (
             <Row className="g-4" xs={1} md={2} style={{ paddingTop: "40px" }}>
               {currentPosts.map((post) => (
-                <Col key={post.kid}>
+                <Col key={post.kid} style={{marginTop : "50px"}}>
                   <DetailsCard
                     title={post.title}
                     description={post.description}
                     imgLink={post.img_url}
                     id={post.kid}
                     pageName="nutrition"
+                  createdDate = {post.createdDate}
+
                   />
                 </Col>
               ))}
@@ -100,7 +107,10 @@ const Nutrition = () => {
 
         <div className={styles.sideContent}>
           <div className={styles.sideColumn}>
-            <SideAddCard />
+            <SideAddCard 
+            title="Explore the new"
+            description="For accessing more services"
+            />
           </div>
           <div className={styles.sideColumn}>
             <SideAddCard
