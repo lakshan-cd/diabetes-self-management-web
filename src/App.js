@@ -16,6 +16,7 @@ import AboutDiabetes from './components/Pages/AboutDiabetes';
 import ReadMore from './components/Pages/ReadMore';
 import Workouts from './components/Pages/Workouts';
 import Nutrition from './components/Pages/Nutrition';
+import DetailsCard from './components/cardsfornr/DetailsCard';
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
     <Route path="/ReadMore/:id/:pageName" element={<ReadMore />}/>
     <Route path="/workouts" element={<Workouts/>}/>
     <Route path="/nutrition" element={<Nutrition/>}/>
+   
 
     
     {/* <Route path="/ReadMore" element={<DataFetch />}/> */}

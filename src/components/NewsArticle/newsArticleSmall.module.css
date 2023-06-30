@@ -4,7 +4,7 @@
     margin-top: 20px;
     border: none;
     /* width: 70% !important; */
-    height: 300px;
+    height: 200px;
    
 }
 
@@ -25,19 +25,3 @@
     color: gray;
 }
 
-@keyframes typing {
-    from {
-      width: 0;
-    }
-    to {
-      width: 100%;
-    }
-  }
-  
-  .typing-animation {
-    animation: typing 3s steps(40) infinite;
-  }
-  .newsArticleContainer {
-    width: 70%; /* Adjust the height value as needed */
-    overflow: auto;
-  }

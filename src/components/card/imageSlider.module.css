@@ -1,8 +1,8 @@
 .image_slider{
-    float: left;
+    /* float: left; */
     padding-left: 30px;
     margin-top: 10px;
     border: none;
-    width: 70% !important;
+    /* width: 70% !important; */
     position: cover;
 }

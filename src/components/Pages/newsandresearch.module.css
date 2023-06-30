@@ -1,44 +1,64 @@
-/* html,body{
-    height: 100%;
-} */
-.div_around_content{
-    /* border: 1px solid red; */
-    display: inline-block;
-    height: 2500px;
-    width: 100%;
-}
-/* 
-.wrapper{
-    border: 1px solid rgb(0, 255, 106);
+/* .div_around_content {
+  border: 1px solid red;
+  display: inline-block;
+  height: 3300px;
 
-    min-height: 100%;
-    height: auto !important;  This line is important for older browsers 
-    position: relative;
-} 
-*/
-.imageslider{
-    padding-top: 20px;
+  width: 100%;
+}
+
+.imageslider {
+  padding-top: 20px;
 }
 .image_slide_header {
-    font-size: 30px;
-    margin-top: 20px;
-    padding-left: 30px;
-    float: left;
-    font-weight: bold;
-    float: left;
-    width: 70%;
-    text-align: left;
-    height:fit-content;
+  font-size: 30px;
+  margin-top: 20px;
+  padding-left: 30px;
+  float: left;
+  font-weight: bold;
+  float: left;
+  width: 70%;
+  text-align: left;
+  height: fit-content;
 }
 
-.divstyles{
-    float: left;
-    height: 300px;
-    width: 70%;
+.divstyles {
+  float: left;
+  height: 300px;
+  width: 70%;
+}
+ */
+ .image_slide_header {
+  font-size: 30px;
+  margin-top: 20px;
+  padding-left: 30px;
+  float: left;
+  font-weight: bold;
+  /* float: left; */
+  /* width: 70%; */
+  text-align: left;
+  height: fit-content;
+}
+.page_container {
+  min-height: 100vh;
+  position: relative;
+}
+.div_around_content {
+  display: flex;
+  justify-content: space-between;
 }
 
-/* .table-grid {
-    xs={1} 
-    md={2} 
-    
-} */
+.mainContent {
+  width: 70%;
+  margin-bottom: 100px; /* Adjust the margin to provide space for the footer */
+}
+
+.sideContent {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.sideColumn {
+  margin-bottom: 20px;
+}

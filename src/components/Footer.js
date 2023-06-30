@@ -13,7 +13,7 @@ const Footer = () => {
   // };
 
   return (
-    <div >
+    <div>
       <div className={styles.footer}>
         <Card className={styles.footer_card}>
           <Card.Body>
@@ -22,43 +22,43 @@ const Footer = () => {
                 <div className={styles.list_items_left}>
                   <span>
                     <a href=".." className={styles.list_items_links}>
-                      Lorem ipsum dolord ipsum
+                    Maintaining good health is crucial for a fulfilling life.
                     </a>
                   </span>
                   <br />
                   <span>
                     <a href=".." className={styles.list_items_links}>
-                      Lorem ipsum dolor
+                    crucial for a fulfilling life
                     </a>
                   </span>
                   <br />
                   <span>
                     <a href=".." className={styles.list_items_links}>
-                      Lorem ipsum dolor ipsum ipsum
+                    Neglecting one's health can have
                     </a>
                   </span>
                   <br />
                   <span>
                     <a href=".." className={styles.list_items_links}>
-                      Lorem ipsum dolor{" "}
+                    consequences on
                     </a>
                   </span>
                   <br />
                   <span>
                     <a href=".." className={styles.list_items_links}>
-                      Lorem ipsum dolor
+                    impacts mental health
                     </a>
                   </span>
                   <br />
                   <span>
                     <a href=".." className={styles.list_items_links}>
-                      Lorem ipsum doloripsum
+                    Insufficient sleep disrupts the
                     </a>
                   </span>
                   <br />
                   <span>
                     <a href=".." className={styles.list_items_links}>
-                      Lorem ipsum{" "}
+                    mpairing cognitive function
                     </a>
                   </span>
                 </div>
@@ -99,49 +99,48 @@ const Footer = () => {
               </Col>
 
               <Col>
-                <div className={styles.list_items_right}>
+              <div className={styles.list_items_right}>
                   <span>
                     <a href=".." className={styles.list_items_links}>
-                      Lorem ipsum dolord ipsum
+                    Maintaining good health is crucial for a fulfilling life.
                     </a>
                   </span>
                   <br />
                   <span>
                     <a href=".." className={styles.list_items_links}>
-                      Lorem ipsum dolor
+                    crucial for a fulfilling life
                     </a>
                   </span>
                   <br />
                   <span>
                     <a href=".." className={styles.list_items_links}>
-                      Lorem ipsum dolor ipsum ipsum
+                    Neglecting one's health can have
                     </a>
                   </span>
                   <br />
                   <span>
                     <a href=".." className={styles.list_items_links}>
-                      Lorem ipsum dolor
+                    consequences on
                     </a>
                   </span>
                   <br />
                   <span>
                     <a href=".." className={styles.list_items_links}>
-                      Lorem ipsum dolor
+                    impacts mental health
                     </a>
                   </span>
                   <br />
                   <span>
                     <a href=".." className={styles.list_items_links}>
-                      Lorem ipsum doloripsum
+                    Insufficient sleep disrupts the
                     </a>
                   </span>
                   <br />
                   <span>
                     <a href=".." className={styles.list_items_links}>
-                      Lorem ipsum dolor
+                    mpairing cognitive function
                     </a>
                   </span>
-                  <br />
                 </div>
               </Col>
             </Row>
